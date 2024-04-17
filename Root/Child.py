@@ -18,55 +18,95 @@
 #       • Generate permutations
 #       • Generate combinations
 
-class Child:
+#%% MODULE BEGINS
+module_name = '<Child>'
 
-    # Read the data
-    def readData():
-        
+'''
+Version: <0.1>
+
+Description:
+    <***>
+
+Authors:
+    <Adam>
+
+Date Created     :  <04-16-2024>
+Date Last Updated:  <04-17-2024>
+
+Doc:
+    <***>
+
+Notes:
+    <***>
+'''
+
+#%% IMPORTS
+import pandas as pd
+
+from Parent import Parent
+from Config import Config
+
+#%% CLASS BEGINS
+class Child(Parent):
+    # Constructor
+    def __init__(self):
+        super().__init__(Config())
+
+        self.dataframe = None
+        self.filepath = Config.filepath
     #
 
-    # Store the read data into a DataFrame
-    def makeDataFrame():
-    
+    # Read the data and store it in a DataFrame
+    def read_data(self):
+        self.dataframe = pd.read_csv(self.filepath)
     #
 
-    # Create a Violin Plot
-    def makeViolinPlot():
+    # Visualize the stored data
+    def visualize_data(self):
+        # Display Histogram
+        self.make_histogram(self.dataframe, 'Total # of Athletes')
 
-    #
+        # Display Line Plot
+        x_values = self.dataframe['Year']
+        y_values = self.dataframe['Total # of Athletes']
 
-    # Create a Whisker-box Plot
-    def makeWhiskerBoxPlot():
-
-    #
-
-    # Create a Scatter Plot
-    def makeScatterPlot():
-
+        self.make_line_plot(x_values, y_values, xlabel='Year', ylabel='Total # of Athletes', title='Total Athletes Over Years')
     #
 
     # Query data for searching and displaying
-    def setSearchData():
+    def query_data(self, condition):
+        '''
+        Search for a value in the data based on a condition.
 
+        Parameters:
+        - condition (str): The condition for filtering the data.
+
+        Returns:
+        - filtered_data (DataFrame): The filtered DataFrame based on the condition.
+        '''
+        return super().query_data(self.dataframe, condition)
     #
+    
+    # Calculate and diplay the stats of the stored data
+    def calculate_stats(self):
+        # Get joint counts
+        #def getJointCounts():
 
-    # Get joint counts
-    def getJointCounts():
+        #
+        # Get joint probabilities
+        #def getJointProb():
+            
+        #
 
-    #
+        # Get conditional probabilities
+        #def getCondProb():
+            
+        #
 
-    # Get joint probabilities
-    def getJointProb():
-
-    #
-
-    # Get conditional probabilities
-    def getCondProb():
-
-    #
-
-    # Get statistics of data
-    def getStats():
-
+        # Get statistics of data
+        #def getStats():
+            
+        #
+        pass
     #
 #
