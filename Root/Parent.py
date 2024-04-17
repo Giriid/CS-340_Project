@@ -50,6 +50,9 @@ class Parent():
 
     # Search for a value in the data
     def query_data(self, data, condition):
+        if not condition.strip():
+            return data
+
         # Split the query condition into column name, operator, and value
         column_name, operator, value = condition.split()
 
@@ -72,3 +75,5 @@ class Parent():
         return filtered_data
     #
 #
+
+# %%

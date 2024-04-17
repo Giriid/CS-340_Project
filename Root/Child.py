@@ -63,6 +63,14 @@ class Child(Parent):
 
     # Visualize the stored data
     def visualize_data(self, data, condition):
+        if not condition.strip():
+            return self.make_line_plot(
+                data['Year'],
+                data['Total_Athletes'],
+                xlabel='Year',
+                ylabel='Total Athletes',
+                title='Total Attending Athletes at the Summer Games')
+        
         column_name, operator, value = condition.split()
 
         # Construct the title of the plot using the query condition
