@@ -80,8 +80,8 @@ class Main:
         print('Filtered Data:')
         print(filtered_data)
 
-        # Call the visualize_data method of the 'Child' class
-        self.child_instance.visualize_data()
+        # Call the visualize_data method of the 'Child' class with the filtered data
+        self.child_instance.visualize_data(filtered_data, condition)
     #
 #
 

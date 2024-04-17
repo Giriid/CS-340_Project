@@ -1,4 +1,4 @@
-Year,Location,# of Male Athletes,# of Female Athletes,Total # of Athletes
+Year,Location,Male_Athletes,Female_Athletes,Total_Athletes
 1896,Athens,241,0,241
 1900,Paris,975,22,997
 1904,St. Louis,645,6,651
@@ -18,7 +18,7 @@ Year,Location,# of Male Athletes,# of Female Athletes,Total # of Athletes
 1972,Munich,6075,1059,7134
 1976,Montreal,4824,1260,6084
 1980,Moscow,4064,1115,5179
-1984,Los Angeles,5263,1566,6829
+1984,Los Angeles,5263,1566,6829 
 1988,Seoul,6197,2194,8391
 1992,Barcelona,6652,2704,9356
 1996,Atlanta,6806,3512,10318

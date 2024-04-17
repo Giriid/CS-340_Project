@@ -62,15 +62,17 @@ class Child(Parent):
     #
 
     # Visualize the stored data
-    def visualize_data(self):
-        # Display Histogram
-        self.make_histogram(self.dataframe, 'Total # of Athletes')
+    def visualize_data(self, data, condition):
+        column_name, operator, value = condition.split()
+
+        # Construct the title of the plot using the query condition
+        title = f'Filtered Data: {condition}'
 
         # Display Line Plot
-        x_values = self.dataframe['Year']
-        y_values = self.dataframe['Total # of Athletes']
+        x_values = data['Year']
+        y_values = data[column_name]
 
-        self.make_line_plot(x_values, y_values, xlabel='Year', ylabel='Total # of Athletes', title='Total Athletes Over Years')
+        self.make_line_plot(x_values, y_values, xlabel='Year', ylabel=column_name, title=title)
     #
 
     # Query data for searching and displaying
@@ -84,7 +86,9 @@ class Child(Parent):
         Returns:
         - filtered_data (DataFrame): The filtered DataFrame based on the condition.
         '''
-        return super().query_data(self.dataframe, condition)
+        filtered_data = super().query_data(self.dataframe, condition)
+
+        return filtered_data
     #
     
     # Calculate and diplay the stats of the stored data
