@@ -1,5 +1,5 @@
 #%% MODULE BEGINS
-module_name = '<Parent>'
+module_name = '<DataAnalyzer>'
 
 '''
 Version: <0.1>
@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 
 
 #%% CLASS BEGINS
-class Parent():
+class DataAnalyzer():
     # Constructor
     def __init__(self, config_constants):
         # Store config constants in a dictionary

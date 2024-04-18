@@ -21,8 +21,8 @@ Notes:
 '''
 
 #%% IMPORTS                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from Child import Child
-from Parent import Parent
+from DataProcessor import DataProcessor
+from DataAnalyzer import DataAnalyzer
 
 #%% USER INTERFACE              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def get_query_condition():
@@ -43,8 +43,8 @@ def get_query_condition():
 
 #%% INITIALIZATIONS             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def init(self):
-    self.child_instance = Child()
-    self.parent_instance = Parent({})
+    self.data_processor = DataProcessor()
+    self.data_analyzer = DataAnalyzer({})
 
 #%% DECLARATIONS                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -61,27 +61,27 @@ def init(self):
 #%% MAIN CODE                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main code start here
 class Main:
-    # Create an instance of the 'Child' class
+    # Create an instance of the 'DataProcessor' class
     def __init__(self):
         init(self)
     #
     
     def run(self):
-        # Call the read/store data method of the 'Child' class
-        self.child_instance.read_data()
+        # Call the read/store data method of the 'DataProcessor' class
+        self.data_processor.read_data()
 
         # Get the query condition from the user
         condition = get_query_condition()
 
-        # Call the query_data method of the 'Child' class with the user provided condition
-        filtered_data = self.child_instance.query_data(condition)
+        # Call the query_data method of the 'DataProcessor' class with the user provided condition
+        filtered_data = self.data_processor.query_data(condition)
 
         # Display the filtered data
         print('Filtered Data:')
         print(filtered_data)
 
-        # Call the visualize_data method of the 'Child' class with the filtered data
-        self.child_instance.visualize_data(filtered_data, condition)
+        # Call the visualize_data method of the 'DataProcessor' class with the filtered data
+        self.data_processor.visualize_data(filtered_data, condition)
     #
 #
 

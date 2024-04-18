@@ -1,25 +1,5 @@
-#   • Read data from a csv file.
-#   • Store into a dataframe.
-#   • Utilize configuration constants
-#   • Visualize distributions in each column using
-#       • Violin plot
-#       • Whisker-box plot
-#       • Scatter plot
-#   • Query data for searching and display
-#       • A set of numeric and string values
-#           • Using Boolean indexing
-#   • Calculate and display
-#       • joint counts
-#       • joint probabilities
-#       • conditional probabilities
-#       • mean, median, std
-#   • For a categorical attribute do the following and display
-#       • Obtain unique values
-#       • Generate permutations
-#       • Generate combinations
-
 #%% MODULE BEGINS
-module_name = '<Child>'
+module_name = '<DataProcessor>'
 
 '''
 Version: <0.1>
@@ -43,11 +23,11 @@ Notes:
 #%% IMPORTS
 import pandas as pd
 
-from Parent import Parent
+from DataAnalyzer import DataAnalyzer
 from Config import Config
 
 #%% CLASS BEGINS
-class Child(Parent):
+class DataProcessor(DataAnalyzer):
     # Constructor
     def __init__(self):
         super().__init__(Config())
