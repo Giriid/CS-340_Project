@@ -1,0 +1,98 @@
+04-24-2024 19:24:05 - "<DataAnalyzer>" module begins.
+04-24-2024 19:24:06 - "<DataProcessor>" module begins.
+04-24-2024 19:24:06 - "<main>" module begins.
+04-24-2024 19:24:06 - Getting config constants from "Config.py"
+04-24-2024 19:24:06 - Creating a dictionary using config constants
+04-24-2024 19:24:06 - Completed getting/setting config constants
+04-24-2024 19:24:06 - Starting the program
+04-24-2024 19:24:06 - Reading data at: Input/Project_Input_Data.csv
+04-24-2024 19:24:09 - User input choice: 1
+04-24-2024 19:24:16 - User input search condition: Year > 1968
+04-24-2024 19:24:16 - Searching data for "Year > 1968"
+04-24-2024 19:24:16 - Searching for  Year > 1968  in data..
+04-24-2024 19:24:16 - Search complete
+04-24-2024 19:24:16 - Saved filtered data to "OUTPUT/filtered_data.csv"
+04-24-2024 19:24:16 - "query_data(...)" called successfully
+04-24-2024 19:24:26 - User input choice: 2
+04-24-2024 19:24:26 - An error occurred: make_histogram() got an unexpected keyword argument 'title'
+04-24-2024 19:24:29 - User input choice: 3
+04-24-2024 19:24:42 - User input: column1="Male_Athletes", column2="Female_Athletes"
+04-24-2024 19:24:42 - Getting joint counts..
+04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-counts.csv"
+04-24-2024 19:24:42 - Getting joint probabilites..
+04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-probabilities.csv"
+04-24-2024 19:24:42 - Getting conditional probabilities..
+04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_conditional-probabilities.csv"
+04-24-2024 19:24:42 - Getting data statistics..
+04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_statistics.csv"
+04-24-2024 19:25:18 - User input choice: 4
+04-24-2024 19:25:18 - Exiting the program
+04-24-2024 19:26:46 - "<DataAnalyzer>" module begins.
+04-24-2024 19:26:46 - "<DataProcessor>" module begins.
+04-24-2024 19:26:46 - "<main>" module begins.
+04-24-2024 19:26:46 - Getting config constants from "Config.py"
+04-24-2024 19:26:46 - Creating a dictionary using config constants
+04-24-2024 19:26:46 - Completed getting/setting config constants
+04-24-2024 19:26:46 - Starting the program
+04-24-2024 19:26:46 - Reading data at: Input/Project_Input_Data.csv
+04-24-2024 19:26:50 - User input choice: 3
+04-24-2024 19:27:00 - User input: column1="Male_Athletes", column2="Female_Athletes"
+04-24-2024 19:27:00 - Getting joint counts..
+04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-counts.csv"
+04-24-2024 19:27:00 - Getting joint probabilites..
+04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-probabilities.json"
+04-24-2024 19:27:00 - Getting conditional probabilities..
+04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_conditional-probabilities.json"
+04-24-2024 19:27:00 - Getting data statistics..
+04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_statistics.csv"
+04-24-2024 19:27:28 - User input choice: 4
+04-24-2024 19:27:28 - Exiting the program
+04-24-2024 19:29:16 - "<DataAnalyzer>" module begins.
+04-24-2024 19:29:17 - "<DataProcessor>" module begins.
+04-24-2024 19:29:17 - "<main>" module begins.
+04-24-2024 19:29:17 - Getting config constants from "Config.py"
+04-24-2024 19:29:17 - Creating a dictionary using config constants
+04-24-2024 19:29:17 - Completed getting/setting config constants
+04-24-2024 19:29:17 - Starting the program
+04-24-2024 19:29:17 - Reading data at: Input/Project_Input_Data.csv
+04-24-2024 19:29:20 - User input choice: 3
+04-24-2024 19:29:33 - User input: column1="Male_Athletes", column2="Female_Athletes"
+04-24-2024 19:29:33 - Getting joint counts..
+04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-counts.csv"
+04-24-2024 19:29:33 - Getting joint probabilites..
+04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-probabilities.json"
+04-24-2024 19:29:33 - Getting conditional probabilities..
+04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_conditional-probabilities.json"
+04-24-2024 19:29:33 - Getting data statistics..
+04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_statistics.csv"
+04-24-2024 19:29:37 - User input choice: 4
+04-24-2024 19:29:37 - Exiting the program
+04-24-2024 19:32:30 - "<DataAnalyzer>" module begins.
+04-24-2024 19:32:30 - "<DataProcessor>" module begins.
+04-24-2024 19:32:30 - "<main>" module begins.
+04-24-2024 19:32:30 - Getting config constants from "Config.py"
+04-24-2024 19:32:30 - Creating a dictionary using config constants
+04-24-2024 19:32:30 - Completed getting/setting config constants
+04-24-2024 19:32:30 - Starting the program
+04-24-2024 19:32:30 - Reading data at: Input/Project_Input_Data.csv
+04-24-2024 19:32:32 - User input choice: 3
+04-24-2024 19:32:42 - User input: column1="Female_Athletes", column2="Total_Athletes"
+04-24-2024 19:32:42 - Getting joint counts..
+04-24-2024 19:32:42 - Saved joint counts to "OUTPUT/Female_Athletes-Total_Athletes_joint-counts.csv"
+04-24-2024 19:32:42 - Getting joint probabilites..
+04-24-2024 19:32:42 - Saved joint probabilites to "OUTPUT/Female_Athletes-Total_Athletes_joint-probabilities.json"
+04-24-2024 19:32:42 - Getting conditional probabilities..
+04-24-2024 19:32:42 - Saved conditional probabilities to "OUTPUT/Female_Athletes-Total_Athletes_conditional-probabilities.json"
+04-24-2024 19:32:42 - Getting data statistics..
+04-24-2024 19:32:42 - Saved data statistics to "OUTPUT/Female_Athletes-Total_Athletes_statistics.csv"
+04-24-2024 19:33:24 - User input choice: 1
+04-24-2024 19:33:41 - User input search condition: Female_Athletes < 500
+04-24-2024 19:33:41 - Searching data for "Female_Athletes < 500"
+04-24-2024 19:33:41 - Searching for  Female_Athletes < 500  in data..
+04-24-2024 19:33:41 - Search complete
+04-24-2024 19:33:41 - Saved filtered data to "OUTPUT/filtered_data.csv"
+04-24-2024 19:33:41 - "query_data(...)" called successfully
+04-24-2024 19:33:55 - User input choice: 2
+04-24-2024 19:33:55 - An error occurred: make_histogram() got an unexpected keyword argument 'title'
+04-24-2024 19:33:57 - User input choice: 4
+04-24-2024 19:33:57 - Exiting the program
