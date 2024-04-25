@@ -1,98 +1,43 @@
-04-24-2024 19:24:05 - "<DataAnalyzer>" module begins.
-04-24-2024 19:24:06 - "<DataProcessor>" module begins.
-04-24-2024 19:24:06 - "<main>" module begins.
-04-24-2024 19:24:06 - Getting config constants from "Config.py"
-04-24-2024 19:24:06 - Creating a dictionary using config constants
-04-24-2024 19:24:06 - Completed getting/setting config constants
-04-24-2024 19:24:06 - Starting the program
-04-24-2024 19:24:06 - Reading data at: Input/Project_Input_Data.csv
-04-24-2024 19:24:09 - User input choice: 1
-04-24-2024 19:24:16 - User input search condition: Year > 1968
-04-24-2024 19:24:16 - Searching data for "Year > 1968"
-04-24-2024 19:24:16 - Searching for  Year > 1968  in data..
-04-24-2024 19:24:16 - Search complete
-04-24-2024 19:24:16 - Saved filtered data to "OUTPUT/filtered_data.csv"
-04-24-2024 19:24:16 - "query_data(...)" called successfully
-04-24-2024 19:24:26 - User input choice: 2
-04-24-2024 19:24:26 - An error occurred: make_histogram() got an unexpected keyword argument 'title'
-04-24-2024 19:24:29 - User input choice: 3
-04-24-2024 19:24:42 - User input: column1="Male_Athletes", column2="Female_Athletes"
-04-24-2024 19:24:42 - Getting joint counts..
-04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-counts.csv"
-04-24-2024 19:24:42 - Getting joint probabilites..
-04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-probabilities.csv"
-04-24-2024 19:24:42 - Getting conditional probabilities..
-04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_conditional-probabilities.csv"
-04-24-2024 19:24:42 - Getting data statistics..
-04-24-2024 19:24:42 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_statistics.csv"
-04-24-2024 19:25:18 - User input choice: 4
-04-24-2024 19:25:18 - Exiting the program
-04-24-2024 19:26:46 - "<DataAnalyzer>" module begins.
-04-24-2024 19:26:46 - "<DataProcessor>" module begins.
-04-24-2024 19:26:46 - "<main>" module begins.
-04-24-2024 19:26:46 - Getting config constants from "Config.py"
-04-24-2024 19:26:46 - Creating a dictionary using config constants
-04-24-2024 19:26:46 - Completed getting/setting config constants
-04-24-2024 19:26:46 - Starting the program
-04-24-2024 19:26:46 - Reading data at: Input/Project_Input_Data.csv
-04-24-2024 19:26:50 - User input choice: 3
-04-24-2024 19:27:00 - User input: column1="Male_Athletes", column2="Female_Athletes"
-04-24-2024 19:27:00 - Getting joint counts..
-04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-counts.csv"
-04-24-2024 19:27:00 - Getting joint probabilites..
-04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-probabilities.json"
-04-24-2024 19:27:00 - Getting conditional probabilities..
-04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_conditional-probabilities.json"
-04-24-2024 19:27:00 - Getting data statistics..
-04-24-2024 19:27:00 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_statistics.csv"
-04-24-2024 19:27:28 - User input choice: 4
-04-24-2024 19:27:28 - Exiting the program
-04-24-2024 19:29:16 - "<DataAnalyzer>" module begins.
-04-24-2024 19:29:17 - "<DataProcessor>" module begins.
-04-24-2024 19:29:17 - "<main>" module begins.
-04-24-2024 19:29:17 - Getting config constants from "Config.py"
-04-24-2024 19:29:17 - Creating a dictionary using config constants
-04-24-2024 19:29:17 - Completed getting/setting config constants
-04-24-2024 19:29:17 - Starting the program
-04-24-2024 19:29:17 - Reading data at: Input/Project_Input_Data.csv
-04-24-2024 19:29:20 - User input choice: 3
-04-24-2024 19:29:33 - User input: column1="Male_Athletes", column2="Female_Athletes"
-04-24-2024 19:29:33 - Getting joint counts..
-04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-counts.csv"
-04-24-2024 19:29:33 - Getting joint probabilites..
-04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_joint-probabilities.json"
-04-24-2024 19:29:33 - Getting conditional probabilities..
-04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_conditional-probabilities.json"
-04-24-2024 19:29:33 - Getting data statistics..
-04-24-2024 19:29:33 - Saved joint counts to "OUTPUT/Male_Athletes-Female_Athletes_statistics.csv"
-04-24-2024 19:29:37 - User input choice: 4
-04-24-2024 19:29:37 - Exiting the program
-04-24-2024 19:32:30 - "<DataAnalyzer>" module begins.
-04-24-2024 19:32:30 - "<DataProcessor>" module begins.
-04-24-2024 19:32:30 - "<main>" module begins.
-04-24-2024 19:32:30 - Getting config constants from "Config.py"
-04-24-2024 19:32:30 - Creating a dictionary using config constants
-04-24-2024 19:32:30 - Completed getting/setting config constants
-04-24-2024 19:32:30 - Starting the program
-04-24-2024 19:32:30 - Reading data at: Input/Project_Input_Data.csv
-04-24-2024 19:32:32 - User input choice: 3
-04-24-2024 19:32:42 - User input: column1="Female_Athletes", column2="Total_Athletes"
-04-24-2024 19:32:42 - Getting joint counts..
-04-24-2024 19:32:42 - Saved joint counts to "OUTPUT/Female_Athletes-Total_Athletes_joint-counts.csv"
-04-24-2024 19:32:42 - Getting joint probabilites..
-04-24-2024 19:32:42 - Saved joint probabilites to "OUTPUT/Female_Athletes-Total_Athletes_joint-probabilities.json"
-04-24-2024 19:32:42 - Getting conditional probabilities..
-04-24-2024 19:32:42 - Saved conditional probabilities to "OUTPUT/Female_Athletes-Total_Athletes_conditional-probabilities.json"
-04-24-2024 19:32:42 - Getting data statistics..
-04-24-2024 19:32:42 - Saved data statistics to "OUTPUT/Female_Athletes-Total_Athletes_statistics.csv"
-04-24-2024 19:33:24 - User input choice: 1
-04-24-2024 19:33:41 - User input search condition: Female_Athletes < 500
-04-24-2024 19:33:41 - Searching data for "Female_Athletes < 500"
-04-24-2024 19:33:41 - Searching for  Female_Athletes < 500  in data..
-04-24-2024 19:33:41 - Search complete
-04-24-2024 19:33:41 - Saved filtered data to "OUTPUT/filtered_data.csv"
-04-24-2024 19:33:41 - "query_data(...)" called successfully
-04-24-2024 19:33:55 - User input choice: 2
-04-24-2024 19:33:55 - An error occurred: make_histogram() got an unexpected keyword argument 'title'
-04-24-2024 19:33:57 - User input choice: 4
-04-24-2024 19:33:57 - Exiting the program
+04-24-2024 22:00:17 - "<DataAnalyzer>" module begins
+04-24-2024 22:00:18 - "<DataProcessor>" module begins
+04-24-2024 22:00:18 - "<main>" module begins
+04-24-2024 22:00:18 - Starting the program
+04-24-2024 22:00:18 - Getting config constants from "Config.py"
+04-24-2024 22:00:18 - Creating a dictionary using config constants
+04-24-2024 22:00:18 - Completed getting/setting config constants
+04-24-2024 22:00:18 - Reading data at: Input/Project_Input_Data.csv
+04-24-2024 22:00:22 - User input choice: 4
+04-24-2024 22:00:24 - User column name:     def categorical_analysis(self, column_name, r=None):         # Create a DataFrame to store the analysis         categorical_analysis = pd.DataFrame(columns=['unique_values', 'permuations', 'combinations'])                  # Obtain unique values         log_message('Generating unique values..')         unique_values = self.data[column_name].unique()         categorical_analysis['unique_values'] = unique_values          if r is not None:             # Generate permutations             log_message('Generating permutations..')             permutations = list(itertools.permutations(unique_values, r))             categorical_analysis['permutations'] = permutations                      # Generate combinations             log_message('Generating combinations..')             combinations = list(itertools.combinations(unique_values, r))             categorical_analysis['combinations'] = combinations         #                  # Save the analysis to a csv file         categorical_analysis.to_csv(os.path.join('OUTPUT/', f'{column_name}_analysis.csv'), index=False)         log_message(f'Saved categorical analysis to "OUTPUT/{column_name}_analysis.csv')         return categorical_analysis     #
+04-24-2024 22:00:27 - User count selection: 
+04-24-2024 22:00:27 - Generating unique values..
+04-24-2024 22:00:27 - 
+---------------------------
+An error occurred: '    def categorical_analysis(self, column_name, r=None):         # Create a DataFrame to store the analysis         categorical_analysis = pd.DataFrame(columns=[\'unique_values\', \'permuations\', \'combinations\'])                  # Obtain unique values         log_message(\'Generating unique values..\')         unique_values = self.data[column_name].unique()         categorical_analysis[\'unique_values\'] = unique_values          if r is not None:             # Generate permutations             log_message(\'Generating permutations..\')             permutations = list(itertools.permutations(unique_values, r))             categorical_analysis[\'permutations\'] = permutations                      # Generate combinations             log_message(\'Generating combinations..\')             combinations = list(itertools.combinations(unique_values, r))             categorical_analysis[\'combinations\'] = combinations         #                  # Save the analysis to a csv file         categorical_analysis.to_csv(os.path.join(\'OUTPUT/\', f\'{column_name}_analysis.csv\'), index=False)         log_message(f\'Saved categorical analysis to "OUTPUT/{column_name}_analysis.csv\')         return categorical_analysis     #'
+---------------------------
+04-24-2024 22:00:28 - User input choice: 5
+04-24-2024 22:00:28 - Exiting the program
+04-24-2024 22:00:37 - "<DataAnalyzer>" module begins
+04-24-2024 22:00:38 - "<DataProcessor>" module begins
+04-24-2024 22:00:38 - "<main>" module begins
+04-24-2024 22:00:38 - Starting the program
+04-24-2024 22:00:38 - Getting config constants from "Config.py"
+04-24-2024 22:00:38 - Creating a dictionary using config constants
+04-24-2024 22:00:38 - Completed getting/setting config constants
+04-24-2024 22:00:38 - Reading data at: Input/Project_Input_Data.csv
+04-24-2024 22:00:40 - User input choice: 4
+04-24-2024 22:00:48 - User column name: Female_Atheletes
+04-24-2024 22:00:50 - User count selection: 10
+04-24-2024 22:00:50 - Generating unique values..
+04-24-2024 22:00:50 - 
+---------------------------
+An error occurred: 'Female_Atheletes'
+---------------------------
+04-24-2024 22:01:18 - User input choice: 4
+04-24-2024 22:01:28 - User column name: Female_Athletes
+04-24-2024 22:01:32 - User count selection: 10
+04-24-2024 22:01:32 - Generating unique values..
+04-24-2024 22:01:32 - Generating permutations..
+04-24-2024 22:01:32 - 
+---------------------------
+An error occurred: Expected int as r
+---------------------------

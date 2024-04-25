@@ -57,7 +57,7 @@ def set_bins(data):
 
 #%% CLASS BEGINS               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class DataAnalyzer():
-    log_message(f'"{module_name}" module begins.')
+    log_message(f'"{module_name}" module begins')
 
     # Constructor
     def __init__(self):
