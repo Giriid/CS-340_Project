@@ -1,44 +1,28 @@
-04-25-2024 14:52:49 - "<DataAnalyzer>" module begins
-04-25-2024 14:52:50 - "<DataProcessor>" module begins
-04-25-2024 14:52:50 - "<main>" module begins
-04-25-2024 14:52:51 - Starting the program
-04-25-2024 14:52:51 - Getting config constants from "Config.py"
-04-25-2024 14:52:51 - Creating a dictionary using config constants
-04-25-2024 14:52:51 - Completed getting/setting config constants
-04-25-2024 14:52:51 - Reading data at: Input/Project_Input_Data.csv
-04-25-2024 14:52:54 - User input choice: 1
-04-25-2024 14:52:54 - User input search condition: 
-04-25-2024 14:52:54 - Searching data for ""
-04-25-2024 14:52:54 - Saved filtered data to "OUTPUT/filtered_data.csv"
-04-25-2024 14:52:54 - "query_data(...)" called successfully
-04-25-2024 14:52:56 - User input choice: 2
-04-25-2024 14:52:56 - Visualizing data using "condition="
-04-25-2024 14:52:56 - No condition given in "visualize_data(self, data, condition)"
-04-25-2024 14:52:56 - Visualizing with default values
-04-25-2024 14:52:56 - Creating a histogram using "data[Total_Athletes]"
-04-25-2024 14:52:56 - Calculating bin size..
-04-25-2024 14:52:56 - bins = 6
-04-25-2024 14:52:56 - Histogram saved to "OUTPUT/histogram.png"
-04-25-2024 14:52:57 - Histogram created
-04-25-2024 14:52:57 - Creating a line plot
-04-25-2024 14:52:57 - Line plot saved to "OUTPUT/line-plot.png"
-04-25-2024 14:52:57 - Line plot created
-04-25-2024 14:52:57 - "visualize_data(...)" called successfully
-04-25-2024 14:53:03 - User input choice: 3
-04-25-2024 14:53:14 - User input: column1="Male_Athletes", column2="Total_Athletes"
-04-25-2024 14:53:14 - Getting joint counts..
-04-25-2024 14:53:14 - Getting joint probabilites..
-04-25-2024 14:53:14 - Getting conditional probabilities..
-04-25-2024 14:53:14 - Getting data statistics..
-04-25-2024 14:53:14 - Saved data statistics to "OUTPUT/Male_Athletes-Total_Athletes_all_statistics.csv"
-04-25-2024 14:53:17 - User input choice: 4
-04-25-2024 14:53:23 - User column name: Female_Athletes
-04-25-2024 14:53:24 - User count selection: 5
-04-25-2024 14:53:24 - Generating unique values..
-04-25-2024 14:53:24 - Generating permutations..
-04-25-2024 14:53:25 - 
----------------------------
-An error occurred: Length of values (14250600) does not match length of index (29)
----------------------------
-04-25-2024 14:53:59 - User input choice: 5
-04-25-2024 14:53:59 - Exiting the program
+04-26-2024 12:40:17 - "<DataAnalyzer>" module begins
+04-26-2024 12:40:17 - "<DataProcessor>" module begins
+04-26-2024 12:40:17 - Getting config constants from "Config.py"
+04-26-2024 12:40:17 - Creating a dictionary using config constants
+04-26-2024 12:40:17 - Completed getting/setting config constants
+04-26-2024 12:40:17 - "<main>" module begins
+04-26-2024 12:40:17 - "TEST CODE" begins
+04-26-2024 12:40:17 - Reading data at: Input/Project_Input_Data.csv
+04-26-2024 12:40:17 - Visualizing data using "condition=None"
+04-26-2024 12:40:17 - Creating a histogram using "data[Total_Athletes]"
+04-26-2024 12:40:17 - Calculating bin size..
+04-26-2024 12:40:17 - bins = 6
+04-26-2024 12:40:17 - Line plot saved to "OUTPUT/Histogram_Plot.png"
+04-26-2024 12:40:18 - Histogram created
+04-26-2024 12:40:18 - Creating a line plot
+04-26-2024 12:40:18 - Line plot saved to "OUTPUT/Line_Plot.png"
+04-26-2024 12:40:18 - Line plot created
+04-26-2024 12:40:18 - Getting joint counts..
+04-26-2024 12:40:18 - Getting joint probabilites..
+04-26-2024 12:40:18 - Getting conditional probabilities..
+04-26-2024 12:40:18 - Getting data statistics..
+04-26-2024 12:40:18 - Saved data statistics to "OUTPUT/Statistics.csv"
+04-26-2024 12:40:18 - Searching data for "Year > 1950"
+04-26-2024 12:40:18 - Searching for  Year > 1950  in data..
+04-26-2024 12:40:18 - Search complete
+04-26-2024 12:40:18 - Saved filtered data to "OUTPUT/filtered_data.csv"
+04-26-2024 12:40:18 - Generating unique values..
+04-26-2024 12:40:18 - Generating permutations..

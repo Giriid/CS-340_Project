@@ -27,6 +27,7 @@ from logger import log_message
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import pandas as pd
 
 #%% CONFIGURATION               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Gets all variables in the 'Config.py' file and stores them in a dictionary
@@ -63,61 +64,72 @@ class DataAnalyzer():
     def __init__(self):
         # Store config constants in a dictionary
         self.config_constants = configuration(self)
+        self.xvalues = pd.DataFrame({})
     #
 
     # Create a Histogram
-    def make_histogram(self, data, column_name, range=None, density=False):
-        # Clear any previous plots from the same figure
+    def make_histogram(self, data, column_name=None, range=None, density=False):
         plt.clf()
 
-        log_message(f'Creating a histogram using "data[{column_name}]"')
+        try:
+            # Default value if no 'column_name' is given
+            if column_name is None:
+                column_name = self.config_constants['def_yvalues']
 
-        bins = set_bins(data)
-        log_message(f'bins = {bins}')
+            log_message(f'Creating a histogram using "data[{column_name}]"')
 
-        # Extract the column data from the DataFrame
-        column_data = data[column_name]
+            bins = set_bins(data)
+            log_message(f'bins = {bins}')
 
-        # Plot the histogram
-        plt.figure(figsize=(8,6))
-        plt.hist(column_data, bins=bins, range=range, density=density)
+            # Extract the column data from the DataFrame
+            column_data = data[column_name]
 
-        # Add labels and title
-        plt.xlabel(column_name)
-        plt.ylabel('Frequency')
-        plt.title('Histogram of ' + column_name)
+            # Plot the histogram
+            plt.hist(column_data, bins=bins, range=range, density=density)
 
-        # Add additional features/information here if needed
+            # Add labels and title
+            plt.xlabel(column_name)
+            plt.ylabel('Frequency')
+            plt.title('Histogram of ' + column_name)
 
-        # Save the histogram plot
-        plt.savefig(os.path.join('OUTPUT/', 'histogram.png'))
-        log_message('Histogram saved to "OUTPUT/histogram.png"')
+            # Add additional features/information here if needed
 
-        # Display the histogram
-        plt.show()
-        log_message('Histogram created')
+            # Save the histogram plot
+            plt.savefig(os.path.join('OUTPUT/', 'Histogram_Plot.png'))
+            log_message('Line plot saved to "OUTPUT/Histogram_Plot.png"')
+
+            # Display the histogram
+            plt.show()
+            log_message('Histogram created')
+        except Exception as e:
+            log_message(f'\n---------------------------\nAn error occurred: {str(e)}\n---------------------------')
+            print(f'\nAn error occurred: {str(e)}')
+        #
     #
 
     # Create a Line Plot
-    def make_line_plot(self, x_values, y_values, xlabel='', ylabel='', title=''):
-        # Clear any previous plots from the same figure
+    def make_line_plot(self, data, x_values=None, y_values=None, xlabel='', ylabel='', title=''):
         plt.clf()
 
+        if x_values is None:
+            x_values = data[self.config_constants['def_xvalues']]
+            y_values = data[self.config_constants['def_yvalues']]
+            xlabel = self.config_constants['def_xlabel']
+            ylabel = self.config_constants['def_ylabel']
+            title = self.config_constants['def_title']
+        #
+
         log_message('Creating a line plot')
-        
-        plt.figure(figsize=(8,6))
 
         plt.plot(x_values, y_values)
-
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
         plt.title(title)
-
         plt.grid(True)
 
         # Save the line plot
-        plt.savefig(os.path.join('OUTPUT/', 'line-plot.png'))
-        log_message('Line plot saved to "OUTPUT/line-plot.png"')
+        plt.savefig(os.path.join('OUTPUT/', 'Line_Plot.png'))
+        log_message('Line plot saved to "OUTPUT/Line_Plot.png"')
 
         # Display the plot
         plt.show()

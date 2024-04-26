@@ -99,7 +99,8 @@ def user_interface(data_processor, filtered_data, search_condition, column1, col
 #
 
 #%% CONSTANTS                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+# Initialize 'DataProcessor'
+data_processor = DataProcessor()
 
 #%% CONFIGURATION               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -131,8 +132,26 @@ def run():
 # Main Self-run block
 if __name__ == "__main__":
     log_message(f'"{module_name}" module begins')
-    # Start the program
-    run()
+
+    # TEST CODE
+    log_message('"TEST CODE" begins')
+
+    # Test the read_data method
+    data_processor.read_data()
+    
+    # Test the visualize_data method
+    data_processor.visualize_data(data_processor.data)
+
+    # Test the calculate_stats method
+    data_processor.calculate_stats(
+        column1=data_processor.data['Female_Athletes'],
+        column2=data_processor.data['Male_Athletes'])
+
+    # Test the query_data method
+    data_processor.query_data('Year > 1950')
+
+    # Test the categorical_analysis method
+    data_processor.categorical_analysis('Total_Athletes', 10)
 #
 
 #%%

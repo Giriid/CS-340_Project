@@ -45,48 +45,34 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
     #
 
     # Visualize the stored data
-    def visualize_data(self, data, condition):
+    def visualize_data(self, data, condition=None):
         log_message(f'Visualizing data using "condition={condition}"')
-        
-        # If there is no condition, then will display all data
-        if not condition.strip():
-            log_message(f'No condition given in "visualize_data(self, data, condition)"')
-            log_message('Visualizing with default values')
 
+        if condition is not None: # If a condition is passed
+            column_name, operator, value = condition.split()
 
-            #------------------------------------------------------------------------------------
-            # NEEDS TO BE MOVED TO PARENT CLASS!!!!!!!!!!!
-            # Set to default values. Default values can be changed in Config file
-            return (
-                self.make_histogram(
-                    data,
-                    self.config_constants['def_yvalues'],
-                ),
-                self.make_line_plot(
-                    data[self.config_constants['def_xvalues']],
-                    data[self.config_constants['def_yvalues']],
-                    xlabel=self.config_constants['def_xlabel'],
-                    ylabel=self.config_constants['def_ylabel'],
-                    title=self.config_constants['def_title'],
-                ))
-            #
-            #------------------------------------------------------------------------------------
+            # Histogram
+            self.make_histogram(data, column_name)
+            
+            # Line plot
+            title = f'Filtered Data: {condition}'
+            x_values = data[self.config_constants['def_xvalues']]
+            y_values = data[column_name]
+            self.make_line_plot(
+                data,
+                x_values,
+                y_values,
+                xlabel=self.config_constants['def_xlabel'],
+                ylabel=column_name,
+                title=title
+            )
+        else: # If no condition is passed
+            # Histogram
+            self.make_histogram(data)
+
+            # Line plot
+            self.make_line_plot(data)
         #
-        
-        column_name, operator, value = condition.split()
-        
-        log_message(f'"column_name={column_name}"')
-
-        # Construct the title of the plot using the query condition
-        title = f'Filtered Data: {condition}'
-
-        self.make_histogram(data, column_name)
-
-        # Display Line Plot
-        x_values = data['Year']
-        y_values = data[column_name]
-
-        self.make_line_plot(x_values, y_values, xlabel='Year', ylabel=column_name, title=title)
     #
 
     # Query data for searching and displaying
@@ -141,8 +127,8 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
         all_stats = pd.concat([joint_counts, joint_prob, cond_prob, stats], axis=1)
 
         # Save all_stats to a csv file
-        all_stats.to_csv(os.path.join('OUTPUT/', f'{column1}-{column2}_all_statistics.csv'))
-        log_message(f'Saved data statistics to "OUTPUT/{column1}-{column2}_all_statistics.csv"')
+        all_stats.to_csv(os.path.join('OUTPUT/', f'Statistics.csv'))
+        log_message(f'Saved data statistics to "OUTPUT/Statistics.csv"')
     #
 
     # Generate
@@ -168,8 +154,8 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
         #
         
         # Save the analysis to a csv file
-        categorical_analysis.to_csv(os.path.join('OUTPUT/', f'{column_name}_analysis.csv'), index=False)
-        log_message(f'Saved categorical analysis to "OUTPUT/{column_name}_analysis.csv')
+        categorical_analysis.to_csv(os.path.join('OUTPUT/', f'Analysis.csv'), index=False)
+        log_message(f'Saved categorical analysis to "OUTPUT/Analysis.csv')
         return categorical_analysis
     #
 #
