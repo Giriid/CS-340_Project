@@ -46,11 +46,16 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
 
     # Visualize the stored data
     def visualize_data(self, data, condition):
+        log_message(f'Visualizing data using "condition={condition}"')
+        
         # If there is no condition, then will display all data
         if not condition.strip():
             log_message(f'No condition given in "visualize_data(self, data, condition)"')
             log_message('Visualizing with default values')
 
+
+            #------------------------------------------------------------------------------------
+            # NEEDS TO BE MOVED TO PARENT CLASS!!!!!!!!!!!
             # Set to default values. Default values can be changed in Config file
             return (
                 self.make_histogram(
@@ -65,14 +70,17 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
                     title=self.config_constants['def_title'],
                 ))
             #
+            #------------------------------------------------------------------------------------
         #
         
         column_name, operator, value = condition.split()
+        
+        log_message(f'"column_name={column_name}"')
 
         # Construct the title of the plot using the query condition
         title = f'Filtered Data: {condition}'
 
-        self.make_histogram(data, data[column_name])
+        self.make_histogram(data, column_name)
 
         # Display Line Plot
         x_values = data['Year']
@@ -138,7 +146,7 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
     #
 
     # Generate
-    def categorical_analysis(self, column_name, r=None):
+    def categorical_analysis(self, column_name, count=None):
         # Create a DataFrame to store the analysis
         categorical_analysis = pd.DataFrame(columns=['unique_values', 'permutations', 'combinations'])
         
@@ -147,15 +155,15 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
         unique_values = self.data[column_name].unique()
         categorical_analysis['unique_values'] = unique_values
 
-        if r is not None:
+        if count is not None:
             # Generate permutations
             log_message('Generating permutations..')
-            permutations = list(itertools.permutations(unique_values, r))
+            permutations = list(itertools.permutations(unique_values, count))
             categorical_analysis['permutations'] = permutations
         
             # Generate combinations
             log_message('Generating combinations..')
-            combinations = list(itertools.combinations(unique_values, r))
+            combinations = list(itertools.combinations(unique_values, count))
             categorical_analysis['combinations'] = combinations
         #
         

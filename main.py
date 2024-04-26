@@ -76,8 +76,11 @@ def user_interface(data_processor, filtered_data, search_condition, column1, col
                 count = input('Input the amount of permutations and combinations to generate - leave blank for none: ')
                 log_message(f'User count selection: {count}')
 
+                #------------------------------------------------------------------------------------
+                # Passing 'count' as type str but should be of type int
                 # Call the categorical_analysis method of the 'DataProcessor' class
                 unique_values = data_processor.categorical_analysis(column_name, count)
+                #------------------------------------------------------------------------------------
 
                 print(unique_values)
             elif choice == '5':

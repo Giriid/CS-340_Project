@@ -25,9 +25,9 @@ Notes:
 filepath = 'Input/Project_Input_Data.csv'
 
 # Total athlete counts
-total_athletes = None
-female_athletes = None
-male_athletes = None
+total_athletes = None # Needs a value
+female_athletes = None # Needs a value
+male_athletes = None # Needs a value
 
 # Labels for default (def) plots
 def_xvalues = 'Year'

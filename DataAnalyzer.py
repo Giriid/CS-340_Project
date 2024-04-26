@@ -70,7 +70,7 @@ class DataAnalyzer():
         # Clear any previous plots from the same figure
         plt.clf()
 
-        log_message('Creating a histogram')
+        log_message(f'Creating a histogram using "data[{column_name}]"')
 
         bins = set_bins(data)
         log_message(f'bins = {bins}')
