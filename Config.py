@@ -11,7 +11,7 @@ Authors:
     <Adam>
 
 Date Created     :  <04-16-2024>
-Date Last Updated:  <04-24-2024>
+Date Last Updated:  <04-27-2024>
 
 Doc:
     <***>
@@ -28,6 +28,9 @@ filepath = 'Input/Project_Input_Data.csv'
 male_athletes = 133,602
 female_athletes = 41,180
 total_athletes = 174,782
+
+# Max permutations and combinations
+max_unique_values = 10
 
 # Labels for default (def) plots
 def_xvalues = 'Year'

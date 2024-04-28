@@ -1,28 +1,39 @@
-04-26-2024 12:40:17 - "<DataAnalyzer>" module begins
-04-26-2024 12:40:17 - "<DataProcessor>" module begins
-04-26-2024 12:40:17 - Getting config constants from "Config.py"
-04-26-2024 12:40:17 - Creating a dictionary using config constants
-04-26-2024 12:40:17 - Completed getting/setting config constants
-04-26-2024 12:40:17 - "<main>" module begins
-04-26-2024 12:40:17 - "TEST CODE" begins
-04-26-2024 12:40:17 - Reading data at: Input/Project_Input_Data.csv
-04-26-2024 12:40:17 - Visualizing data using "condition=None"
-04-26-2024 12:40:17 - Creating a histogram using "data[Total_Athletes]"
-04-26-2024 12:40:17 - Calculating bin size..
-04-26-2024 12:40:17 - bins = 6
-04-26-2024 12:40:17 - Line plot saved to "OUTPUT/Histogram_Plot.png"
-04-26-2024 12:40:18 - Histogram created
-04-26-2024 12:40:18 - Creating a line plot
-04-26-2024 12:40:18 - Line plot saved to "OUTPUT/Line_Plot.png"
-04-26-2024 12:40:18 - Line plot created
-04-26-2024 12:40:18 - Getting joint counts..
-04-26-2024 12:40:18 - Getting joint probabilites..
-04-26-2024 12:40:18 - Getting conditional probabilities..
-04-26-2024 12:40:18 - Getting data statistics..
-04-26-2024 12:40:18 - Saved data statistics to "OUTPUT/Statistics.csv"
-04-26-2024 12:40:18 - Searching data for "Year > 1950"
-04-26-2024 12:40:18 - Searching for  Year > 1950  in data..
-04-26-2024 12:40:18 - Search complete
-04-26-2024 12:40:18 - Saved filtered data to "OUTPUT/filtered_data.csv"
-04-26-2024 12:40:18 - Generating unique values..
-04-26-2024 12:40:18 - Generating permutations..
+04-27-2024 19:52:22 - "<DataAnalyzer>" module begins
+04-27-2024 19:52:22 - "<DataProcessor>" module begins
+04-27-2024 19:52:22 - Getting config constants from "Config.py"
+04-27-2024 19:52:22 - Creating a dictionary using config constants
+04-27-2024 19:52:22 - Completed getting/setting config constants
+04-27-2024 19:52:22 - "<main>" module begins
+04-27-2024 19:52:22 - "TEST CODE" begins
+04-27-2024 19:52:22 - Testing "read_data()"
+04-27-2024 19:52:22 - Reading data at: Input/Project_Input_Data.csv
+04-27-2024 19:52:22 - Testing "visualize_data()"
+04-27-2024 19:52:22 - Visualizing data using "condition=None"
+04-27-2024 19:52:22 - Creating a histogram using "data[Total_Athletes]"
+04-27-2024 19:52:22 - Calculating bin size..
+04-27-2024 19:52:22 - bins = 6
+04-27-2024 19:52:23 - Histogram saved to "OUTPUT/Histogram_Plot.png"
+04-27-2024 19:52:23 - Histogram created
+04-27-2024 19:52:23 - Creating a line plot
+04-27-2024 19:52:23 - Line plot saved to "OUTPUT/Line_Plot.png"
+04-27-2024 19:52:23 - Line plot created
+04-27-2024 19:52:23 - Testing "calculate_stats()"
+04-27-2024 19:52:23 - Getting joint counts..
+04-27-2024 19:52:23 - Getting joint probabilites..
+04-27-2024 19:52:23 - Getting conditional probabilities..
+04-27-2024 19:52:23 - Getting data statistics..
+04-27-2024 19:52:23 - Saved data statistics to "OUTPUT/Statistics.csv"
+04-27-2024 19:52:23 - Testing "query_data()"
+04-27-2024 19:52:23 - Searching data for "Year > 1950"
+04-27-2024 19:52:23 - Searching for "Year > 1950" in data..
+04-27-2024 19:52:23 - Search complete
+04-27-2024 19:52:23 - Saved filtered data to "OUTPUT/filtered_data.csv"
+04-27-2024 19:52:23 - Testing "categorical_analysis()"
+04-27-2024 19:52:23 - Generating unique values..
+04-27-2024 19:52:23 - Generating permutations of unique values..
+04-27-2024 19:52:23 - Number of unique values is large, limiting amount of permutations..
+04-27-2024 19:52:27 - Generating combinations of unique values..
+04-27-2024 19:52:27 - Number of unique values is large, limiting amount of combinations..
+04-27-2024 19:52:39 - Saved categorical analysis to "OUTPUT/Analysis.csv"
+04-27-2024 19:52:39 - Program testing finished.
+04-27-2024 19:52:39 - Exiting Program!

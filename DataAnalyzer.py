@@ -11,7 +11,7 @@ Authors:
     <Adam>
 
 Date Created     :  <04-16-2024>
-Date Last Updated:  <04-24-2024>
+Date Last Updated:  <04-27-2024>
 
 Doc:
     <***>
@@ -96,7 +96,7 @@ class DataAnalyzer():
 
             # Save the histogram plot
             plt.savefig(os.path.join('OUTPUT/', 'Histogram_Plot.png'))
-            log_message('Line plot saved to "OUTPUT/Histogram_Plot.png"')
+            log_message('Histogram saved to "OUTPUT/Histogram_Plot.png"')
 
             # Display the histogram
             plt.show()
@@ -142,7 +142,7 @@ class DataAnalyzer():
             return data
         #
         
-        log_message(f'Searching for  {condition}  in data..')
+        log_message(f'Searching for "{condition}" in data..')
 
         # Split the query condition into column name, operator, and value
         column_name, operator, value = condition.split()

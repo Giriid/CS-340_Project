@@ -11,7 +11,7 @@ Authors:
     <Adam>
 
 Date Created     :  <04-16-2024>
-Date Last Updated:  <04-24-2024>
+Date Last Updated:  <04-27-2024>
 
 Doc:
     <***>
@@ -22,10 +22,10 @@ Notes:
 
 #%% IMPORTS               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import DataAnalyzer
-from logger import log_message
 import itertools
-import pandas as pd
+from logger import log_message
 import os
+import pandas as pd
 
 #%% CLASS BEGINS               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class DataProcessor(DataAnalyzer.DataAnalyzer):
@@ -128,34 +128,55 @@ class DataProcessor(DataAnalyzer.DataAnalyzer):
 
         # Save all_stats to a csv file
         all_stats.to_csv(os.path.join('OUTPUT/', f'Statistics.csv'))
-        log_message(f'Saved data statistics to "OUTPUT/Statistics.csv"')
+        log_message('Saved data statistics to "OUTPUT/Statistics.csv"')
     #
 
-    # Generate
-    def categorical_analysis(self, column_name, count=None):
-        # Create a DataFrame to store the analysis
-        categorical_analysis = pd.DataFrame(columns=['unique_values', 'permutations', 'combinations'])
-        
+    # Generate categorical analysis
+    def categorical_analysis(self, column_name):
         # Obtain unique values
         log_message('Generating unique values..')
         unique_values = self.data[column_name].unique()
-        categorical_analysis['unique_values'] = unique_values
+        print(unique_values)
 
-        if count is not None:
-            # Generate permutations
-            log_message('Generating permutations..')
-            permutations = list(itertools.permutations(unique_values, count))
-            categorical_analysis['permutations'] = permutations
-        
-            # Generate combinations
-            log_message('Generating combinations..')
-            combinations = list(itertools.combinations(unique_values, count))
-            categorical_analysis['combinations'] = combinations
+        # Generate permutations of unique values
+        log_message('Generating permutations of unique values..')
+
+        if len(unique_values) > 10:
+            log_message('Number of unique values is large, limiting amount of permutations..')
+            unique_values_subset = unique_values[:10]
+            permutations = list(itertools.permutations(unique_values_subset))
+        else:
+            permutations = list(itertools.permutations(unique_values))
         #
+        print(permutations)
+
+        # Generate combinations of unique values
+        log_message('Generating combinations of unique values..')
+
+        combinations = []
         
-        # Save the analysis to a csv file
-        categorical_analysis.to_csv(os.path.join('OUTPUT/', f'Analysis.csv'), index=False)
-        log_message(f'Saved categorical analysis to "OUTPUT/Analysis.csv')
-        return categorical_analysis
+        if len(unique_values) > 10:
+            log_message('Number of unique values is large, limiting amount of combinations..')
+            unique_values_subset = unique_values[:10]
+            for r in range(1, min(len(unique_values), self.config_constants['max_unique_values']) + 1):
+                subset_combinations = list(itertools.combinations(unique_values_subset, r))
+                combinations.extend(subset_combinations)
+            #
+        else:
+            for r in range(1, len(unique_values) + 1):
+                combinations.extend(itertools.combinations(unique_values, r))
+        #
+        print(combinations)
+
+        # Create DataFrame to store analysis
+        analysis_df = pd.DataFrame({
+            'Unique_Values': [unique_values],
+            'Permutations': [permutations],
+            'Combinations': [combinations]
+        })
+
+        # Save the analysis to a CSV file
+        analysis_df.to_csv(os.path.join('OUTPUT/', f'Analysis.csv'))
+        log_message('Saved categorical analysis to "OUTPUT/Analysis.csv"')
     #
 #

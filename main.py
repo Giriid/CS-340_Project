@@ -11,7 +11,7 @@ Authors:
     <Adam, Josh, Josh>
 
 Date Created     :  <04-08-2024>
-Date Last Updated:  <04-24-2024>
+Date Last Updated:  <04-27-2024>
 
 Doc:
     <***>
@@ -137,21 +137,29 @@ if __name__ == "__main__":
     log_message('"TEST CODE" begins')
 
     # Test the read_data method
+    log_message('Testing "read_data()"')
     data_processor.read_data()
     
     # Test the visualize_data method
+    log_message('Testing "visualize_data()"')
     data_processor.visualize_data(data_processor.data)
 
     # Test the calculate_stats method
+    log_message('Testing "calculate_stats()"')
     data_processor.calculate_stats(
         column1=data_processor.data['Female_Athletes'],
         column2=data_processor.data['Male_Athletes'])
 
     # Test the query_data method
+    log_message('Testing "query_data()"')
     data_processor.query_data('Year > 1950')
 
     # Test the categorical_analysis method
-    data_processor.categorical_analysis('Total_Athletes', 10)
+    log_message('Testing "categorical_analysis()"')
+    data_processor.categorical_analysis('Location')
+
+    log_message('Program testing finished.')
+    log_message('Exiting Program!')
 #
 
 #%%
