@@ -1,39 +1,37 @@
-04-27-2024 19:52:22 - "<DataAnalyzer>" module begins
-04-27-2024 19:52:22 - "<DataProcessor>" module begins
-04-27-2024 19:52:22 - Getting config constants from "Config.py"
-04-27-2024 19:52:22 - Creating a dictionary using config constants
-04-27-2024 19:52:22 - Completed getting/setting config constants
-04-27-2024 19:52:22 - "<main>" module begins
-04-27-2024 19:52:22 - "TEST CODE" begins
-04-27-2024 19:52:22 - Testing "read_data()"
-04-27-2024 19:52:22 - Reading data at: Input/Project_Input_Data.csv
-04-27-2024 19:52:22 - Testing "visualize_data()"
-04-27-2024 19:52:22 - Visualizing data using "condition=None"
-04-27-2024 19:52:22 - Creating a histogram using "data[Total_Athletes]"
-04-27-2024 19:52:22 - Calculating bin size..
-04-27-2024 19:52:22 - bins = 6
-04-27-2024 19:52:23 - Histogram saved to "OUTPUT/Histogram_Plot.png"
-04-27-2024 19:52:23 - Histogram created
-04-27-2024 19:52:23 - Creating a line plot
-04-27-2024 19:52:23 - Line plot saved to "OUTPUT/Line_Plot.png"
-04-27-2024 19:52:23 - Line plot created
-04-27-2024 19:52:23 - Testing "calculate_stats()"
-04-27-2024 19:52:23 - Getting joint counts..
-04-27-2024 19:52:23 - Getting joint probabilites..
-04-27-2024 19:52:23 - Getting conditional probabilities..
-04-27-2024 19:52:23 - Getting data statistics..
-04-27-2024 19:52:23 - Saved data statistics to "OUTPUT/Statistics.csv"
-04-27-2024 19:52:23 - Testing "query_data()"
-04-27-2024 19:52:23 - Searching data for "Year > 1950"
-04-27-2024 19:52:23 - Searching for "Year > 1950" in data..
-04-27-2024 19:52:23 - Search complete
-04-27-2024 19:52:23 - Saved filtered data to "OUTPUT/filtered_data.csv"
-04-27-2024 19:52:23 - Testing "categorical_analysis()"
-04-27-2024 19:52:23 - Generating unique values..
-04-27-2024 19:52:23 - Generating permutations of unique values..
-04-27-2024 19:52:23 - Number of unique values is large, limiting amount of permutations..
-04-27-2024 19:52:27 - Generating combinations of unique values..
-04-27-2024 19:52:27 - Number of unique values is large, limiting amount of combinations..
-04-27-2024 19:52:39 - Saved categorical analysis to "OUTPUT/Analysis.csv"
-04-27-2024 19:52:39 - Program testing finished.
-04-27-2024 19:52:39 - Exiting Program!
+05-01-2024 09:22:50 - "<DataAnalyzer>" module begins
+05-01-2024 09:22:50 - "<DataProcessor>" module begins
+05-01-2024 09:22:50 - Getting config constants from "Config.py"
+05-01-2024 09:22:50 - Creating a dictionary using config constants
+05-01-2024 09:22:50 - Completed getting/setting config constants
+05-01-2024 09:22:50 - "<main>" module begins
+05-01-2024 09:22:50 - "TEST CODE" begins
+05-01-2024 09:22:50 - Testing "read_data()"
+05-01-2024 09:22:50 - Reading data at: Input/Project_Input_Data.csv
+05-01-2024 09:22:50 - Testing "visualize_data()"
+05-01-2024 09:22:50 - Visualizing data using "condition=None"
+05-01-2024 09:22:50 - Creating a histogram using "data[Total_Athletes]"
+05-01-2024 09:22:50 - Calculating bin size..
+05-01-2024 09:22:50 - bins = 6
+05-01-2024 09:22:50 - Histogram saved to "OUTPUT/Histogram_Plot.png"
+05-01-2024 09:22:51 - Histogram created
+05-01-2024 09:22:51 - Creating a line plot
+05-01-2024 09:22:51 - Line plot saved to "OUTPUT/Line_Plot.png"
+05-01-2024 09:22:51 - Line plot created
+05-01-2024 09:22:51 - Testing "calculate_stats()"
+05-01-2024 09:22:51 - Getting joint counts..
+05-01-2024 09:22:51 - Getting joint probabilites..
+05-01-2024 09:22:51 - Getting conditional probabilities..
+05-01-2024 09:22:51 - Getting data statistics..
+05-01-2024 09:22:51 - Saved data statistics to "OUTPUT/Statistics.csv"
+05-01-2024 09:22:51 - Testing "query_data()"
+05-01-2024 09:22:51 - Searching data for "Year > 1950"
+05-01-2024 09:22:51 - Searching for "Year > 1950" in data..
+05-01-2024 09:22:51 - Search complete
+05-01-2024 09:22:51 - Saved filtered data to "OUTPUT/filtered_data.csv"
+05-01-2024 09:22:51 - Testing "categorical_analysis()"
+05-01-2024 09:22:51 - Generating unique values..
+05-01-2024 09:22:51 - Generating permutations of unique values..
+05-01-2024 09:22:51 - Generating combinations of unique values..
+05-01-2024 09:22:51 - Writing categorical analysis to file..
+05-01-2024 09:22:51 - Program testing finished.
+05-01-2024 09:22:51 - Exiting Program!

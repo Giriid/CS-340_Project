@@ -75,14 +75,7 @@ def user_interface(data_processor, filtered_data, search_condition, column1, col
 
                 count = input('Input the amount of permutations and combinations to generate - leave blank for none: ')
                 log_message(f'User count selection: {count}')
-
-                #------------------------------------------------------------------------------------
-                # Passing 'count' as type str but should be of type int
-                # Call the categorical_analysis method of the 'DataProcessor' class
-                unique_values = data_processor.categorical_analysis(column_name, count)
-                #------------------------------------------------------------------------------------
-
-                print(unique_values)
+                data_processor.categorical_analysis(column_name, count)
             elif choice == '5':
                 log_message('Exiting the program')
                 print('\nExiting the program.')
@@ -131,35 +124,40 @@ def run():
 #%% SELF-RUN                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Main Self-run block
 if __name__ == "__main__":
-    log_message(f'"{module_name}" module begins')
+    try:
+        log_message(f'"{module_name}" module begins')
 
-    # TEST CODE
-    log_message('"TEST CODE" begins')
+        # TEST CODE
+        log_message('"TEST CODE" begins')
 
-    # Test the read_data method
-    log_message('Testing "read_data()"')
-    data_processor.read_data()
-    
-    # Test the visualize_data method
-    log_message('Testing "visualize_data()"')
-    data_processor.visualize_data(data_processor.data)
+        # Test the read_data method
+        log_message('Testing "read_data()"')
+        data_processor.read_data()
+        
+        # Test the visualize_data method
+        log_message('Testing "visualize_data()"')
+        data_processor.visualize_data(data_processor.data)
 
-    # Test the calculate_stats method
-    log_message('Testing "calculate_stats()"')
-    data_processor.calculate_stats(
-        column1=data_processor.data['Female_Athletes'],
-        column2=data_processor.data['Male_Athletes'])
+        # Test the calculate_stats method
+        log_message('Testing "calculate_stats()"')
+        data_processor.calculate_stats(
+            column1=data_processor.data['Female_Athletes'],
+            column2=data_processor.data['Male_Athletes'])
 
-    # Test the query_data method
-    log_message('Testing "query_data()"')
-    data_processor.query_data('Year > 1950')
+        # Test the query_data method
+        log_message('Testing "query_data()"')
+        data_processor.query_data('Year > 1950')
 
-    # Test the categorical_analysis method
-    log_message('Testing "categorical_analysis()"')
-    data_processor.categorical_analysis('Location')
+        # Test the categorical_analysis method
+        log_message('Testing "categorical_analysis()"')
+        data_processor.categorical_analysis('Location')
 
-    log_message('Program testing finished.')
-    log_message('Exiting Program!')
+        log_message('Program testing finished.')
+        log_message('Exiting Program!')
+    except Exception as e:
+            log_message(f'\n---------------------------\nAn error occurred: {str(e)}\n---------------------------')
+            print(f'\nAn error occurred: {str(e)}')
+        #
 #
 
 #%%

@@ -30,7 +30,7 @@ female_athletes = 41,180
 total_athletes = 174,782
 
 # Max permutations and combinations
-max_unique_values = 10
+max_unique_values = 3
 
 # Labels for default (def) plots
 def_xvalues = 'Year'
