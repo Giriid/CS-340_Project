@@ -2,7 +2,7 @@
 module_name = '<Config>'
 
 '''
-Version: <0.2>
+Version: <0.3>
 
 Description:
     <***>
@@ -11,7 +11,7 @@ Authors:
     <Adam>
 
 Date Created     :  <04-16-2024>
-Date Last Updated:  <04-27-2024>
+Date Last Updated:  <05-01-2024>
 
 Doc:
     <***>

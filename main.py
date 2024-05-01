@@ -2,16 +2,16 @@
 module_name = '<main>'
 
 '''
-Version: <0.3>
+Version: <0.4>
 
 Description:
     <***>
 
 Authors:
-    <Adam, Josh, Josh>
+    <Adam, Josh Poche>
 
 Date Created     :  <04-08-2024>
-Date Last Updated:  <04-27-2024>
+Date Last Updated:  <05-01-2024>
 
 Doc:
     <***>
